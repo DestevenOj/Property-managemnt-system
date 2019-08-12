@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content-title %}
+    <h1>{{ title }}</h1>
+{% endblock %}
+{% block main-content %}
+    <div class="row">
+        <div class="card .col-md-3">
+            <div class="card-body">
+                <div class="card-header bg-primary text-white"> Total Units:</div>
+                <div class="card-body bg-dark text-white"> {{ total_num_rooms }} <p>All we have</p></div>
+            </div>
+        </div>
+
+        <div class="card .col-md-3">
+            <div class="card-body">
+                <div class="card-header bg-primary text-white"> Available Units:</div>
+                <div class="card-body bg-dark text-white"> {{ available_num_rooms }} <p>Empty rooms</p></div>
+            </div>
+        </div>
+
+        <div class="card .col-md-3">
+            <div class="card-body">
+                <div class="card-header bg-primary text-white"> Total Reservations:</div>
+                <div class="card-body bg-dark text-white"> {{ total_num_reservations }} <p>Interested to rent</p></div>
+            </div>
+        </div>
+        <div class="card .col-md-3">
+            <div class="card-body">
+                <div class="card-header bg-primary text-white"> Total Tenants:</div>
+                <div class="card-body bg-dark text-white">{{ total_num_customers }}<p>Previous tenants</p></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
